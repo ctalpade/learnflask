@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flask Learning Journey</title>
+</head>
+<body style="background-color:powderblue;">
+
+<h1>Flask is Great</h1>
+<p>I want to master it.</p>
+  <p>Good morning {{params.name}} Your age is {{params.age}}</p>
+  <p>My Favourite Topics</p>
+  {% for i in params.topics %}
+    <li>{{i}}</li>
+    {% endfor %}
+
+</body>
+</html>
