@@ -1,0 +1,18 @@
+<div>
+<div class="row ">
+    <div class="col-4 border fw-bold">Course Name</div>
+    <div class="col-4 fw-bold border">Level</div>
+  <div class="col-4 fw-bold border">Action</div>
+</div>
+  
+{% for item in params.courses%}
+<div class="row ">
+<div class="col-4 border">{{item.name}}</div>
+<div class="col-4 border">{{item.level}}</div>
+<div class="col-4 border"><button class="btn btn-primary mb-2 mt-2 btn-sm">Enroll</button></div>
+</div>
+{% endfor %}
+  </div>
+
+
+

@@ -1,7 +1,27 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask import render_template
 
 app = Flask(__name__)
+
+courses = [
+    {
+        'name': 'Python',
+        'level': 'Intermediate'
+    },
+    {
+        'name': 'Java',
+        'level': 'Advanced'
+    },
+    {
+        'name': 'Flask',
+        'level': 'Beginner'
+    },
+]
+
+
+@app.route("/api/listtopics")
+def list_topics():
+    return jsonify(courses)
 
 
 @app.route("/")
@@ -10,7 +30,7 @@ def hello_world():
                            params={
                                'name': 'Chaitanya',
                                'age': 47,
-                               'topics': ['Python', 'Flask', 'HTML']
+                               'courses': courses
                            })
 
 
