@@ -34,6 +34,15 @@ def hello_world():
                            })
 
 
+@app.route("/test1")
+def test1():
+    return 'this is from test1'
+
+
 print(__name__)
+sq1 = [n * n for n in range(10) if n % 2 == 0]
+sq2 = {n: n * n for n in range(10) if n % 2 == 0}
+print(sq1)
+print(sq2)
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
