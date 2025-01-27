@@ -36,6 +36,10 @@ def hello_world():
 
 @app.route("/test1")
 def test1():
+    f = open("demofile2.txt", "a")
+    f.write("Now the file has more content!")
+    f.close()
+
     return 'this is from test1'
 
 
