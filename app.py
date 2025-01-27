@@ -33,6 +33,18 @@ def hello_world():
                                'courses': courses
                            })
 
+@app.route('/listfiles')
+def showResults(requestid):
+    files = []
+    cwd = None
+    try:
+        cwd = os.getcwd()
+        files = os.listdir(cwd)
+    except Exception as e:
+        pass
+    return 'The current dir is '+str(cwd)+' files in this folder '+str(files)
+
+
 
 @app.route("/test1")
 def test1():
