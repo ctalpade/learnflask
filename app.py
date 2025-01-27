@@ -34,7 +34,7 @@ def hello_world():
                            })
 
 @app.route('/listfiles')
-def showResults(requestid):
+def showResults():
     files = []
     cwd = None
     try:
